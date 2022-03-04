@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github URL](https://github.com/veyselcanatalay/FrontendMentorChallenges/tree/main/Article%20Preview%20Component)
+- Live Site URL: [Live URL](https://frontend-mentor-article-preview-component-gamma.vercel.app/)
 
 ## My process
 
