@@ -1,0 +1,144 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Lexend Deca", sans-serif;
+    overflow: hidden;
+    font-size: 15px;
+    display: flex;
+    height: 100vh;
+    background-color: hsl(0, 0%, 95%);
+    color: hsla(0, 0%, 100%, 0.75);
+    
+}
+
+.container{
+    background-color: hsl(0, 0%, 95%);
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.sedans{
+    margin-left: 10%;
+    background-color: hsl(31, 77%, 52%);
+    max-width: 278px;
+    height: 450px;
+    padding: 42px;
+    position: relative;
+    border-radius:  7px 0 0 7px;
+}
+.suvs{
+    background-color: hsl(184, 100%, 22%);
+    max-width: 278px;
+    height: 450px;
+    padding: 42px;
+    position: relative;
+}
+.luxury{
+    margin-right: 10%;
+    background-color: hsl(179, 100%, 13%);
+    max-width: 278px;
+    height: 450px;
+    padding: 42px;
+    position: relative;
+    border-radius: 0 7px 7px 0;
+}
+.attribution{
+    margin-top: 10%;
+}
+p{
+    color: hsla(0, 0%, 100%, 0.75);
+    font-size: 13.8px;
+    line-height: 1.5rem;
+}
+h1{
+    color: hsla(0, 0%, 100%, 0.75);
+    font-weight: 700;
+    font-size: 36px;
+    margin-bottom: 1.5rem;
+}
+button {
+    transition: all 0.2s ease-in-out;
+    bottom: 42px;
+    font-family: inherit;
+    text-align: center;
+    border: 2px solid hsl(0, 0%, 95%);
+    position: absolute;
+    cursor: pointer;
+    display: inline-block;
+    padding: 14px;
+    width: 146px;
+    border-radius: 25px;
+    outline: none;
+}
+.sedans .learnMore{
+    background-color: hsl(0, 0%, 95%);
+    color: hsl(31, 77%, 52%);
+}
+.suvs .learnMore{
+    background-color: hsl(0, 0%, 95%);
+    color: hsl(184, 100%, 22%);
+}
+.luxury .learnMore{
+    background-color: hsl(0, 0%, 95%);
+    color: hsl(179, 100%, 13%);
+}
+.sedans button:hover, .suvs button:hover, .luxury button:hover{
+    background-color: transparent;
+    color: hsl(0, 0%, 95%);
+}
+button:active {
+    transform: scale(0.9);
+}
+img {
+    margin-bottom: 36px;
+}
+.attribution {
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    color: #999;
+    bottom: 10px;
+    font-size: 0.75rem;
+    line-height: 20px;
+    text-align: center;
+}
+.attribution a {
+    text-decoration: none;
+    color: #555;
+}
+.attribution a:hover {
+    color: #000;
+}
+
+@media only screen and (max-width: 844px){
+    body{
+        display: flex;
+        width: 100%;
+        overflow: scroll;
+        flex-wrap: wrap;
+    }
+    .container {
+        padding: 50px 0;
+        flex-direction: column;
+    }
+    .sedans{
+        border-radius: 7px 7px 0 0;
+    }
+    .luxury{
+        border-radius: 0 0 7px 7px;
+    }
+    p{
+        font-size: 0.77rem;
+    }
+    .attribution{
+        position: relative;
+        width: auto;
+        padding-bottom: 10px;
+    }
+}

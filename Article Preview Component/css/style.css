@@ -1,0 +1,127 @@
+body {
+    background-color: hsl(210, 46%, 95%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+    background: white;
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    grid-gap: 20px;
+    width: 680px;
+    border-radius: 10px;
+    box-shadow: 10px;
+}
+.left-side {
+    background-image: url(/images/drawers.jpg);
+    background-size: cover;
+    height: 100%;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.right-side {
+    font-size: 13px;
+    font-family: 'Manrope', sans-serif;
+    
+}
+.right-side h2 {
+    color: hsl(217, 19%, 35%);
+    font-weight: 700;
+}
+.right-side p {
+    line-height: 20px;
+    padding-bottom: 10px;
+}
+.author {
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    grid-gap: 10px;
+}
+.author-name h4{
+    color: hsl(217, 19%, 35%);
+    font-weight: 700;
+    margin: 0px;
+    padding-top: 0px;
+}
+.author-name p {
+    margin: 0px;
+}
+.avatar img {
+    border-radius: 100%;
+    width: 40px;
+}
+.share-icon {
+    transform: translateY(7px) translateX(7px);
+}
+.popuptext {
+    display: flex;
+}
+.popuptext img {
+    padding: 2px;
+    margin-top: 5px;
+    margin-left: 2px;
+}
+.popuptext p {
+    padding: 3px;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    background: hsl(210, 46%, 95%);
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+}
+.popup img {
+    transform: translateX(7px) translateY(7px);
+} 
+.popup .popuptext {
+    visibility: hidden;
+    width: 190px;
+    background: hsl(217, 19%, 35%);
+    color:hsl(212, 23%, 69%);
+    text-align: center;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: -20%;
+    margin-left: -80px;
+    letter-spacing: 3px;
+}
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color:  hsl(217, 19%, 35%) transparent transparent transparent;
+}  
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}

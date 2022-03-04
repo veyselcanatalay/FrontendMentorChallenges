@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/jtoggler.styles.css">
+
+  <title>Frontend Mentor | Calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { 
+      font-size: 11px; 
+      text-align: center; 
+      margin-top: 50px;
+    }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body class="body-theme">
+  <div class="container">
+    <div class="heading">
+      <div class="row justify-content-end mt-20 align-items-center">
+        <div class="width-2">
+          <h1 class="header header-theme">calc</h1>
+        </div>
+        <div class="toogle toogle-theme width-2 row align-items-center justify-content-end">
+          <div class="theme">
+            <h6>THEME</h6>
+          </div>
+          <div class="control">
+            <div class="options row">
+              <h6 class="option">1</h6>
+              <h6 class="option">2</h6>
+              <h6 class="option">3</h6>
+            </div>
+            <div class="toogle">
+              <input type="checkbox" class="jtoggler" data-jtmulti-state>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="screen screen-theme">
+      <h1 class="result">0</h1>
+    </div>
+    <div class="keypad keypad-theme">
+      <div class="row mt-20">
+        <input type="button" name="7" value="7" class="item button-theme">
+        <input type="button" name="8" value="8" class="item button-theme">
+        <input type="button" name="9" value="9" class="item button-theme">
+        <input type="button" name="DEL" value="DEL" id="del" class="item alt-button-theme">
+      </div>
+      <div class="row mt-20">
+        <input type="button" name="4" value="4" class="item button-theme">
+        <input type="button" name="5" value="5" class="item button-theme">
+        <input type="button" name="6" value="6" class="item button-theme">
+        <input type="button" name="+" value="+" class="item button-theme">
+      </div>
+      <div class="row mt-20">
+        <input type="button" name="1" value="1" class="item button-theme">
+        <input type="button" name="2" value="2" class="item button-theme">
+        <input type="button" name="3" value="3" class="item button-theme">
+        <input type="button" name="-" value="-" class="item button-theme">
+      </div>
+      <div class="row mt-20">
+        <input type="button" name="." value="." class="item button-theme">
+        <input type="button" name="0" value="0" class="item button-theme">
+        <input type="button" name="/" value="/" class="item button-theme">
+        <input type="button" name="x" value="x" class="item button-theme">
+      </div>
+      <div class="row mt-20">
+        <input type="button" name="reset" value="RESET" id="reset" class="item-2 alt-button-theme">
+        <input type="button" name="equals" value="=" id="equals" class="item-2 equals-theme">
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://www.linkedin.com/in/veyselcanatalay/">Veysel Can ATALAY</a>.
+    </div>
+  </div>
+  
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="js/jtoggler.js"></script>
+  <script>
+    $(document).ready(() => {
+      $('.jtoggler').jtoggler();
+      $(document).on('jt:toggled', function (event, target) {
+        console.log(event, target);
+        console.info($(target).prop('checked'))
+      });
+      $(document).on('jt:toggled:multi', function (event, target) {
+        if (($(target).parent().index()) === 1) {
+          $('.item').removeClass('button-theme button-theme-3').addClass('button-theme-2');
+          $('body').removeClass('body-theme body-theme-3').addClass('body-theme-2');
+          $('.keypad').removeClass('keypad-theme keypad-theme-3').addClass('keypad-theme-2');
+          $('.screen').removeClass('screen-theme screen-theme-3').addClass('screen-theme-2');
+          $('#del').removeClass('alt-button-theme alt-button-theme-3').addClass('alt-button-theme-2');
+          $('#reset').removeClass('alt-button-theme alt-button-theme-3').addClass('alt-button-theme-2');
+          $('#equals').removeClass('equals-theme equals-theme-3').addClass('equals-theme-2');
+          $('.result').removeClass('result-theme result-theme-3').addClass('result-theme-2');
+          $('.header').removeClass('header-theme header-theme-3').addClass('header-theme-2');
+          $('.toogle').removeClass('toogle-theme toogle-theme-3').addClass('toogle-theme-2')
+        }
+
+        if (($(target).parent().index()) === 2) {
+          $('.item').removeClass('button-theme button-theme-2').addClass('button-theme-3');
+          $('body').removeClass('body-theme body-theme-2').addClass('body-theme-3');
+          $('.keypad').removeClass('keypad-theme keypad-theme-2').addClass('keypad-theme-3');
+          $('.screen').removeClass('screen-theme screen-theme-2').addClass('screen-theme-3');
+          $('#del').removeClass('alt-button-theme alt-button-theme-2').addClass('alt-button-theme-3');
+          $('#reset').removeClass('alt-button-theme alt-button-theme-2').addClass('alt-button-theme-3');
+          $('#equals').removeClass('equals-theme equals-theme-2').addClass('equals-theme-3');
+          $('.result').removeClass('result-theme result-theme-2').addClass('result-theme-3');
+          $('.header').removeClass('header-theme header-theme-2').addClass('header-theme-3');
+          $('.toogle').removeClass('toogle-theme toogle-theme-2').addClass('toogle-theme-3')
+        }
+
+        if (($(target).parent().index()) === 0) {
+          $('.item').removeClass('button-theme-3 button-theme-2').addClass('button-theme');
+          $('body').removeClass('body-theme-3 body-theme-2').addClass('body-theme');
+          $('.keypad').removeClass('keypad-theme-3 keypad-theme-2').addClass('keypad-theme');
+          $('.screen').removeClass('screen-theme-3 screen-theme-2').addClass('screen-theme');
+          $('#del').removeClass('alt-button-theme-3 alt-button-theme-2').addClass('alt-button-theme');
+          $('#reset').removeClass('alt-button-theme-3 alt-button-theme-2').addClass('alt-button-theme');
+          $('#equals').removeClass('equals-theme-3 equals-theme-2').addClass('equals-theme');
+          $('.result').removeClass('result-theme-3 result-theme-2').addClass('result-theme');
+          $('.header').removeClass('header-theme-3 header-theme-2').addClass('header-theme');
+          $('.toogle').removeClass('toogle-theme-3 toogle-theme-2').addClass('toogle-theme')
+        }
+        console.log(event, target);
+        console.info($(target).parent().index())
+      });
+    });
+  </script>
+
+  
+  <script src="js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,270 @@
+.body-theme {
+    background-color: hsl(222, 26%, 31%);
+}
+
+.body-theme-2 {
+    background-color: hsl(0, 0%, 90%);
+}
+
+.body-theme-3 {
+    background-color: hsl(268, 75%, 9%);
+}
+
+.theme {
+    margin-right: 9px;
+    font-family: 'Spartan', sans-serif;
+}
+
+.justify-content-end {
+    justify-content: end;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.align-items-end {
+    align-items: flex-end;
+}
+
+.options {
+    position: absolute;
+    top: 4px;
+    margin-left: 11px;
+}
+
+.option {
+    font-family: 'Spartan', sans-serif;
+    margin-right: 21px;
+}
+
+.container {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -10%);
+    width: 30%;
+    height: 570px;
+}
+
+
+.keypad {
+    padding: 10px;
+    border-radius: 12px;
+}
+
+.keypad-theme {
+    background-color: hsl(224, 36%, 15%); 
+}
+
+.keypad-theme-2 {
+    background-color: hsl(0, 5%, 81%); 
+}
+
+.keypad-theme-3 {
+    background-color: hsl(268, 71%, 12%); 
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.mt-20{
+    margin: 20px 0px;
+}
+
+.screen {
+    width: 100%;
+    height: 100px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.screen-theme {
+    background-color: hsl(224, 36%, 15%);
+}
+
+.screen-theme-2 {
+    background-color: hsl(0, 0%, 93%);
+}
+
+.screen-theme-3 {
+    background-color: hsl(268, 71%, 12%);
+}
+
+.result {
+    color: #ffffff;
+    font-family: 'Spartan', sans-serif;
+    text-align: end;
+    padding: 33px 24px;
+}
+
+.result-theme {
+    color: #ffffff;
+}
+
+.result-theme-2 {
+    color: hsl(60, 10%, 19%);
+}
+
+.result-theme-3 {
+    color: hsl(52, 100%, 62%);
+}
+
+.width-2 {
+    width: 50%;
+    padding: 10px;
+}
+
+.header {
+    font-family: 'Spartan', sans-serif;
+    margin: auto;
+}
+
+.toogle-theme{
+    color: hsl(0, 0%, 100%);
+}
+
+.toogle-theme-2{
+    color: hsl(60, 10%, 19%);
+}
+
+.toogle-theme-3{
+    color: hsl(52, 100%, 62%);
+}
+
+.header-theme {
+    color: #ffffff;
+}
+
+.header-theme-2 {
+    color: hsl(60, 10%, 19%);
+}
+
+.header-theme-3 {
+    color: hsl(52, 100%, 62%);
+}
+
+.heading {
+    margin: 5px 0;
+}
+
+.item-2 {
+    width: 50%;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 32px;
+    font-family: 'Spartan', sans-serif;
+    box-shadow: 0px 4px hsl(225, 19%, 92%);
+    border-radius: 9px;
+    margin: 4px 10px;
+    color: hsl(221, 14%, 31%); 
+    border: none;
+}
+
+.item {
+   width: 30%;
+   padding: 10px;
+   font-weight: bold;
+   font-size: 32px;
+   font-family: 'Spartan', sans-serif;
+   border-radius: 9px;
+   margin: 4px 10px;
+   border: none;
+}
+
+.button-theme {
+   box-shadow: 0px 4px hsl(240, 1%, 83%);
+   color: hsl(221, 14%, 31%);
+} 
+
+.button-theme-2 {
+    box-shadow: 0px 4px hsl(35, 11%, 61%);
+    color: hsl(60, 9%, 19%);
+    background-color: hsl(45, 7%, 89%);
+ }
+ 
+.button-theme-3 {
+    color: hsl(52, 100%, 62%);
+    background-color: hsl(268, 47%, 21%);
+    box-shadow: 0px 4px hsl(290, 70%, 36%);
+} 
+
+.alt-button-theme {
+    background-color: hsl(225, 21%, 49%);
+    box-shadow: 0px 4px hsl(224, 28%, 35%);
+    color: #ffffff;
+}
+
+.alt-button-theme-2 {
+    background-color: hsl(185, 42%, 37%);
+    box-shadow: 0px 4px hsl(185, 58%, 25%);
+    color: #ffffff;
+}
+
+.alt-button-theme-3 {
+    background-color: hsl(281, 89%, 26%);
+    box-shadow: 0px 4px hsl(285, 91%, 52%);
+    color: #ffffff;
+}
+
+#reset {
+    font-size: 20px;
+}
+
+#del {
+    font-size: 20px;
+}
+
+#equals {
+    font-size: 20px;
+}
+
+.equals-theme {
+    color: #ffffff;
+    background-color: hsl(6, 63%, 50%);
+    box-shadow: 0px 4px hsl(6, 70%, 34%);
+}
+
+.equals-theme-2 {
+    color: #ffffff;
+    background-color: hsl(25, 98%, 40%);
+    box-shadow: 0px 4px hsl(25, 99%, 27%);
+}
+
+.equals-theme-3 {
+    color: hsl(198, 20%, 13%);
+    background-color: hsl(176, 100%, 44%);
+    box-shadow: 0px 4px hsl(177, 92%, 70%);
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 80%;
+    }
+  }
+
+@media (min-width: 768px) {
+    .container {
+        width: 70%;
+    }
+  }
+
+@media (min-width: 1024px) {
+    .container {
+        width: 50%;
+    }
+  } 
+
+@media (min-width: 1440px) {
+    .container {
+        width: 30%;
+    }
+  }
