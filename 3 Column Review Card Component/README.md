@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github Solution URL](https://github.com/veyselcanatalay/FrontendMentorChallenges/tree/main/3%20Column%20Review%20Card%20Component)
+- Live Site URL: [Live URL](https://my-project-iota-five.vercel.app/)
 
 ## My process
 
