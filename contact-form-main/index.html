@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link href="assets/index.css" rel="stylesheet">
+  <title>Frontend Mentor | Contact form</title>
+</head>
+<body>
+<main>
+  <div class="card">
+    <form id="contactForm" action="#" method="post">
+      <h1>Contact Us</h1>
+
+      <div class="row two-col">
+        <label for="first-name"><span class='text'>First Name</span>
+          <input id="first-name" name="firstName" required type="text">
+          <span class="errmsg" id="first-name-err">This field is required</span>
+        </label>
+        <label for="last-name"><span class='text'>Last Name</span>
+          <input id="last-name" name="lastName" required type="text">
+          <span class="errmsg" id="last-name-err">This field is required</span>
+        </label>
+      </div>
+
+      <label for="email"><span class='text'>Email Address</span>
+        <input id="email" name="email" required type="email">
+        <span class="errmsg" id="email-err">Please enter a valid email address</span>
+      </label>
+
+      <label><span class='text'>Query Type</span>
+        <div class="row two-col">
+          <span class="box radio-container">
+            <input id="general" name="queryType" type="radio" value="general">
+            <span class="customradio"></span>
+            <span class="radiotext">General Enquiry</span>
+          </span>
+          <span class="box radio-container">
+            <input id="support" name="queryType" type="radio" value="support">
+            <span class="customradio"></span>
+            <span class="radiotext">Support Request</span>
+          </span>
+        </div>
+        <span class="errmsg" id="radioerr">Please select a query type</span>
+      </label>
+
+      <label for="message"><span class='text'>Message</span>
+        <textarea id="message" name="message" required></textarea>
+        <span class="errmsg" id="message-err">This field is required</span>
+      </label>
+
+      <label for="check">
+        <div class="row">
+          <input id="check" name="consent" type="checkbox" required>
+          <span class="labelcheckbox"></span>
+          <span class='text'>I consent to being contacted by the team</span>
+        </div>
+        <span class="errmsg" id="checkerr">To submit this form, please consent to being contacted</span>
+      </label>
+
+      <button type="submit">Submit</button>
+
+      <div class="success-msg" id="success-msg">
+        <div class="row">
+          <img alt="" src="./assets/images/icon-success-check.svg">
+          <h2>Message Sent!</h2>
+        </div>
+        <p>Thanks for completing the form. We'll be in touch soon!</p>
+      </div>
+    </form>
+  </div>
+</main>
+
+
+<footer>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/veyselcanatalay/frontend-mentor-challenges/tree/main/contact-form-main">Veysel Can ATALAY</a>.
+  </div>
+</footer>
+
+<!-- JavaScript dosyasını burada bağlayın -->
+<script src="./assets/index.js"></script>
+</body>
+</html>

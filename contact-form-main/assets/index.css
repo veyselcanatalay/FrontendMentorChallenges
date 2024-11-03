@@ -1,0 +1,271 @@
+
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --clr-Light-Green: hsl(148, 38%, 91%);
+  --clr-Green: hsl(169, 82%, 27%);
+  --clr-Red: hsl(0, 66%, 56%);
+
+  --clr-White: hsl(0, 0%, 100%);
+  --clr-Medium-Grey: hsl(186, 15%, 59%);
+  --clr-Dark-Grey: hsl(187, 24%, 22%);
+
+  --fw-b: 700;
+}
+
+@font-face{
+  font-family: 'Karla';
+  src: url('./fonts/Karla-VariableFont_wght.ttf');
+}
+
+body{
+  height: 100vh; /* Tüm görünüm alanını kapsar */
+  overflow: hidden; /* Taşmayı engeller */
+  font-family: 'Karla';
+  font-size: 16px;
+  font-weight: 400;
+  background-color: var(--clr-Light-Green);
+
+  color: var(--clr-Dark-Grey);
+}
+
+main{
+  height: 100%;
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card{
+  width: min(740px, 95%);
+  height: min(775px, 95%);
+  padding: 40px;
+  background-color: var(--clr-White);
+  display: grid;
+  grid-template-rows: auto;
+  margin: 0;
+  border-radius: 0.8rem;
+}
+
+.errmsg{
+  color: var(--clr-Red);
+  display: none;
+}
+
+
+.row{
+  display: flex;
+}
+
+label{
+  display: flex;
+  flex-direction: column;
+}
+
+.success-msg{
+  background-color: var(--clr-Dark-Grey);
+  width: 73%;
+  padding: 1.5rem;
+  margin: 0 auto;
+  border-radius: 0.6rem;
+  position: absolute;
+  top: -9rem;
+  left: 5rem;
+  visibility: hidden;
+  h2{
+    color: var(--clr-White);
+    font-size: 1rem;
+    font-weight: var(--fw-b);
+    margin-left: 0.5rem;
+  }
+  p{
+    color: var(--clr-Medium-Grey);
+    margin-top: 1rem;
+  }
+}
+
+form{
+  display: grid;
+  position: relative;
+}
+
+.two-col{
+  width: 100%;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.two-col > *{
+  flex-grow: 1;
+}
+
+input, .box{
+  height: 3rem;
+  border: 1px solid var(--clr-Medium-Grey);
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.warning{
+  border: 1px solid var(--clr-Red);
+}
+.success{
+  border: 1px solid var(--clr-Medium-Grey);
+}
+
+input{
+  padding-left: 2rem;
+}
+
+.box{
+  padding-left: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+
+.radiotext{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 2rem;
+  font-size: inherit;
+}
+
+label[for='check'] .row{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  span{
+    margin-block: auto;
+  }
+  .text{
+    margin-left: -1rem;
+  }
+}
+
+textarea{
+  height: 6.5rem;
+  border-radius: 0.5rem;
+  padding: 2rem;
+}
+
+.text{
+  margin-bottom: 1rem;
+}
+
+.text::after{
+  content: '*';
+  position: relative;
+  left: 1rem;
+  top: 0.2rem;
+  color: var(--clr-Green);
+}
+
+button{
+  border: none;
+  background-color: var(--clr-Green);
+  color: var(--clr-White);
+  font-weight: var(--fw-b);
+  line-height: 2;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  letter-spacing: 0.1rem;
+}
+
+/*  custom checkbox  */
+input[type=checkbox] {
+  visibility: hidden;
+}
+.labelcheckbox {
+  border: 1px solid #000;
+  display: inline-block;
+  width: 1rem;
+  aspect-ratio: 1;
+  z-index: 10;
+  position: relative;
+  left: -1.9rem;
+}
+input[type=checkbox]:checked + .labelcheckbox {
+  background: url("./images/icon-checkbox-check.svg") no-repeat center;
+
+}
+
+/*custom radio */
+
+
+input[type=radio] {
+  opacity: 0;
+  z-index: 20;
+}
+
+.customradio {
+  display: block;
+  height: 21px;
+  width: 20px;
+  border: 1px solid var(--clr-Medium-Grey);
+  border-radius: 50%;
+  z-index: 10;
+  position: absolute;
+  left: 1.8rem;
+  top: 0.8rem;
+}
+
+input[type=radio]:checked + .customradio {
+  background: url('./images/icon-radio-selected.svg') center;
+}
+
+@media (width < 500px){
+  body{
+    font-size: 13px;
+  }
+  main{
+    margin-top: 70px;
+  }
+  .row{
+    flex-direction: column;
+  }
+  label[for=check] .row{
+    flex-direction: row;
+  }
+  .card{
+    padding:2rem 1rem;
+    height: auto;
+  }
+  button{
+    margin-block:2rem 4rem;
+    height: 3rem;
+  }
+  .text{
+    margin-top: 1rem;
+  }
+  form{
+    margin-top: 5rem;
+  }
+  .success-msg{
+    position: absolute;
+    left: 2rem;
+    top: auto;
+    bottom: 20%;
+    .row{
+      flex-direction: row;
+    }
+  }
+}
+
+
+
+.attribution {
+  font-size: 11px; text-align: center;
+  position: fixed;
+  right: 5%;
+  bottom: 0;
+}
+.attribution a { color: hsl(228, 45%, 44%); }
